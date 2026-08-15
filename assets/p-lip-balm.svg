@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 480">
+<defs><linearGradient id="gparchstick" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#F0E9DE"/><stop offset=".45" stop-color="#FCFAF6"/><stop offset="1" stop-color="#DCCFBB"/></linearGradient>
+<linearGradient id="gparchstickc" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#4A4054"/><stop offset=".5" stop-color="#3E3546"/><stop offset="1" stop-color="#2F2937"/></linearGradient></defs>
+<ellipse cx="190" cy="442" rx="35" ry="13" fill="rgba(62,53,70,.10)"/>
+<rect x="156" y="182" width="68" height="60" rx="10" fill="url(#gparchstickc)"/>
+<rect x="162" y="238" width="56" height="182" rx="10" fill="url(#gparchstick)" stroke="rgba(62,53,70,.10)"/>
+<rect x="170" y="248" width="8" height="160" rx="5" fill="rgba(255,255,255,.5)"/>
+<rect x="168" y="274" width="44" height="91" rx="4" fill="#FCFAF6" stroke="rgba(62,53,70,.12)"/><text x="190" y="311" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="10" fill="#332E38">Lip</text><text x="190" y="324" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#332E38">Balm</text>
+</svg>
