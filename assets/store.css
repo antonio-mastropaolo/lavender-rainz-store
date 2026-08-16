@@ -200,13 +200,14 @@ section.land{padding:clamp(52px,8vw,104px) 0}
 .card:hover .ordercta{background:var(--plum);color:#F4F0F7;border-color:var(--plum)}
 
 /* ── mobile nav: hamburger + off-canvas drawer ── */
-.menubtn{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;
+.menubtn{display:none;flex-direction:column;justify-content:center;align-items:center;gap:6px;
   width:44px;height:44px;min-width:44px;border:1px solid var(--rule);background:none;cursor:pointer;
   padding:0;flex:none;-webkit-tap-highlight-color:transparent}
-.menubtn span{display:block;width:20px;height:1px;background:var(--ink);transition:transform .3s,opacity .3s}
-.menubtn[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.menubtn span{display:block;width:22px;height:2px;min-height:2px;border-radius:1px;
+  background-color:var(--ink);transition:transform .3s,opacity .3s;flex-shrink:0}
+.menubtn[aria-expanded="true"] span:nth-child(1){transform:translateY(8px) rotate(45deg)}
 .menubtn[aria-expanded="true"] span:nth-child(2){opacity:0}
-.menubtn[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.menubtn[aria-expanded="true"] span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
 .mobilewrap{position:fixed;inset:0;z-index:300;visibility:hidden;pointer-events:none}
 .mobilewrap.open{visibility:visible;pointer-events:auto}
 .mobilebackdrop{position:absolute;inset:0;background:rgba(51,46,56,.45);opacity:0;transition:opacity .3s}
