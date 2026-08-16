@@ -198,3 +198,38 @@ section.land{padding:clamp(52px,8vw,104px) 0}
 .card .ordercta{margin-top:12px;align-self:flex-start;display:inline-flex;font-size:9px;letter-spacing:.24em;
   text-transform:uppercase;color:var(--plum);border:1px solid rgba(62,53,70,.28);padding:9px 15px;transition:.3s}
 .card:hover .ordercta{background:var(--plum);color:#F4F0F7;border-color:var(--plum)}
+
+/* ── mobile nav: hamburger + off-canvas drawer ── */
+.menubtn{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;
+  width:44px;height:44px;min-width:44px;border:1px solid var(--rule);background:none;cursor:pointer;
+  padding:0;flex:none;-webkit-tap-highlight-color:transparent}
+.menubtn span{display:block;width:20px;height:1px;background:var(--ink);transition:transform .3s,opacity .3s}
+.menubtn[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.menubtn[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menubtn[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.mobilewrap{position:fixed;inset:0;z-index:300;visibility:hidden;pointer-events:none}
+.mobilewrap.open{visibility:visible;pointer-events:auto}
+.mobilebackdrop{position:absolute;inset:0;background:rgba(51,46,56,.45);opacity:0;transition:opacity .3s}
+.mobilewrap.open .mobilebackdrop{opacity:1}
+.mobilelinks{position:absolute;top:0;right:0;bottom:0;width:min(86vw,360px);max-width:100vw;
+  background:var(--shell);box-shadow:-10px 0 34px rgba(0,0,0,.18);display:flex;flex-direction:column;
+  gap:2px;padding:18px 10px calc(24px + env(safe-area-inset-bottom));transform:translateX(100%);
+  transition:transform .35s cubic-bezier(.2,.7,.2,1);overflow-y:auto;-webkit-overflow-scrolling:touch}
+.mobilewrap.open .mobilelinks{transform:translateX(0)}
+.mobilelinks a{display:block;padding:16px 18px;font-size:14.5px;letter-spacing:.05em;min-height:44px;
+  border-bottom:1px solid var(--rule);color:var(--ink)}
+.mobilelinks a.btn{margin:16px 8px 4px;border:1px solid var(--plum);border-bottom:1px solid var(--plum);
+  text-align:center;padding:15px 20px}
+.mobilelinks a.btn:hover,.mobilelinks a.btn:active{background:var(--plum2);color:#F4F0F7}
+.mobileclose{align-self:flex-end;width:44px;height:44px;min-width:44px;border:none;background:none;
+  font-size:28px;line-height:1;color:var(--muted);cursor:pointer;margin-bottom:4px;
+  -webkit-tap-highlight-color:transparent}
+@media(max-width:980px){.menubtn{display:flex}}
+@media(min-width:981px){.menubtn,.mobilewrap{display:none !important}}
+
+/* prevent CSS-grid blowout: let fr-track children shrink below their content's
+   min-content width so long nowrap buttons/labels wrap instead of pushing layout
+   wider than the viewport (was causing horizontal scroll on product pages ~1024px) */
+.grid>*,.pr>*,.strip .wrap>*,.fg>*,.founder>*,.mv2>*,.steps2>*,.clean2>*,.prom>*,.contact2>*,.contact2 .row>*{min-width:0}
+.orderbox .row{min-width:0}
+.orderbox .row a{white-space:normal}
