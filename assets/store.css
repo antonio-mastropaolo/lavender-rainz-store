@@ -194,3 +194,7 @@ section.land{padding:clamp(52px,8vw,104px) 0}
 @media(prefers-reduced-motion:reduce){
   .shimmer,.announce .dot,.soonchip .dot{animation:none}
   .hero .sprig svg path,.hero .sprig svg ellipse{animation:none;opacity:1;stroke-dashoffset:0}}
+
+.card .ordercta{margin-top:12px;align-self:flex-start;display:inline-flex;font-size:9px;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--plum);border:1px solid rgba(62,53,70,.28);padding:9px 15px;transition:.3s}
+.card:hover .ordercta{background:var(--plum);color:#F4F0F7;border-color:var(--plum)}
